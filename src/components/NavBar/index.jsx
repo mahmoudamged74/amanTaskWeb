@@ -2,6 +2,7 @@ import React from 'react'
 import Image from '../../lib/ImgComp/Image'
 import Icon from '../../lib/IconComp/Icon'
 import SideMenu from './SideMenu'
+import { NavLink } from 'react-router-dom'
 
 function index() {
   return (
@@ -10,19 +11,19 @@ function index() {
 
         <div className='hidden items-center gap-8 md:flex'>
             <div className='flex items-center gap-2 cursor-pointer'>
-                <p>المنتجات</p>
+                <NavLink to="priceList" ><p>المنتجات</p></NavLink>
                 <Icon name='downArrow' size={12} />
             </div>
             <div className='flex items-center gap-2 cursor-pointer'>
-                <p>عروض</p>
+            <NavLink to="offers" ><p>عروض</p></NavLink>    
                 <Icon name='downArrow' size={12} />
             </div>
             <div className='flex items-center gap-2 cursor-pointer'>
-                <p>قائمة الاسعار</p>
+              <NavLink to="priceList" ><p>قائمة الاسعار</p></NavLink>  
                 <Icon name='downArrow' size={12} />
             </div>
             <div className='flex items-center gap-2 cursor-pointer'>
-                <p>الرئيسيه</p>
+              <NavLink to="/" ><p>الرئيسيه</p></NavLink>  
             </div>
         </div>
 
